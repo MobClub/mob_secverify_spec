@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
 	s.vendored_frameworks = 'SecVerify/SecVerify.framework', 'SecVerify/PlatformSDK/Mobile/TYRZSDK.framework', 'SecVerify/PlatformSDK/Telecom/EAccountHYSDK.framework', 'SecVerify/PlatformSDK/Union/OAuth.framework'
 	s.resources 		  = 'SecVerify/SecVerify.bundle', 'SecVerify/PlatformSDK/Mobile/TYRZResource.bundle', 'SecVerify/PlatformSDK/Telecom/EAccountOpenPageResource.bundle'
 	s.xcconfig  		  =  {'OTHER_LDFLAGS' => '-ObjC' }
-	s.dependency 'MOBFoundation'
+	s.dependency 'mobfoundation_spec'
 end
