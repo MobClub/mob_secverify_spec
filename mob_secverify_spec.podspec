@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name                = "mob_secverify_spec"
-	s.version             = "2.1.13"
+	s.version             = "2.1.3"
 	s.summary             = '秒验，一键登录'
 	s.license             = 'Copyright © 2019-2029 mob.com'
 	s.author              = { "mob" => "mobproducts@163.com" }
