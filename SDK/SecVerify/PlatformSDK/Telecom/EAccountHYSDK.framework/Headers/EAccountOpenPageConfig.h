@@ -17,9 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 #define EACCOUNT_LOGINBUTTON_BACKGROUND_COLOR 1 //登录按钮选择使用背景颜色
 #define EACCOUNT_LOGINBUTTON_BACKGROUND_IMAGES 2 //登录按钮选择使用背景图片
 
+#define EACCOUNT_MINI_POSITION_CENTER 10 //弹窗默认居中
+#define EACCOUNT_MINI_POSITION_TOP 3 //弹窗置顶
+#define EACCOUNT_MINI_POSITION_BOTTOM 4 //弹窗底部
+
 @interface EAccountOpenPageConfig : NSObject
 /**
- SDK3.7.0版本注意事项:
+ SDK接入注意事项:
  
  1、合作方根据自身需求，给需要修改的配置项传值即可，无需修改的配置项可不传入值
  
@@ -37,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
         *其余控件的偏移量OffsetY值，是相对于屏幕（safeArea）的顶部，即控件的顶部（top）相对于父view的顶部（top）
  
  5、隐私协议标签（包括弹窗的隐私协议标签）的高度推荐按照我们提供的xib高度来设置，以便更好地响应点击和区分点击到的协议。
+ 
+ 6、资源包EAccountOpenPageResource.bundle里面，没有使用到的文件可以删除，如xib文件。（注意：部分图片被sdk默认使用，如无配置替换，不可删除，如返回键默认图片、loading默认图片）
  
  */
 
@@ -271,9 +277,8 @@ NS_ASSUME_NONNULL_BEGIN
  除了隐私协议名称的其他文字的颜色
  */
 @property (nonatomic,strong) UIColor *PALabelOtherTextColor;
-/**隐私协议名称的颜色*/
+/**运营商隐私协议名称的颜色*/
 @property (nonatomic,strong) UIColor *PANameColor;
-
 /**合作方用户协议URL
  合作方可传入用户协议的URL，用户点击协议后，SDK加载打开协议页面
  */
@@ -288,6 +293,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic,assign) CGFloat PALabelOffsetY;
 
+/***************************************************************
+ *v3.7.2新增
+ *合作方隐私协议名称的颜色，可用于单独配置合作方隐私协议名称的颜色*/
+@property (nonatomic,strong) UIColor *partnerPANameColor;
+/***************************************************************
+ 
 /*-------------------------------弹窗----------------------------------------*/
 /**
  弹窗相关tag
@@ -351,19 +362,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**弹窗 协议其他文字颜色*/
 @property (nonatomic,strong) UIColor *dialogPAOtherTextColor;
-/**弹窗 协议名称文字颜色*/
+/**弹窗 运营商协议名称文字颜色*/
 @property (nonatomic,strong) UIColor *dialogPANameColor;
+/**
+ 弹窗 合作方隐私协议名称的颜色  v3.7.2增加，可用于单独配置合作方隐私协议名称的颜色
+ */
+/***************************************************************
+ *v3.7.2新增
+ *弹窗 合作方隐私协议名称的颜色，可用于单独配置 弹窗合作方隐私协议名称的颜色*/
+@property (nonatomic,strong) UIColor *dialogPartnerPANameColor;
+/***************************************************************
 
-
-
-
+ 
 /*----------------------------自定义按钮--------------------------------------*/
 /**
- 自定义按钮相关tag
+ 自定义按钮相关tag 默认 21301到21305
  */
 @property (nonatomic, assign) NSUInteger customBtnTag1;
 @property (nonatomic, assign) NSUInteger customBtnTag2;
 @property (nonatomic, assign) NSUInteger customBtnTag3;
+@property (nonatomic, assign) NSUInteger customBtnTag4;
+@property (nonatomic, assign) NSUInteger customBtnTag5;
 
 /*-------------------------------------协议web页面配置-----------------------------------------*/
 
@@ -391,6 +410,47 @@ NS_ASSUME_NONNULL_BEGIN
 /**协议web页面 进度条颜色*/
 @property (nonatomic,strong) UIColor *webProgressViewColor;
 
+/*======================================v3.7.2新增属性==========================================*/
+
+/*---------------------------------mini登录框配置---------------------------------*/
+/**
+ 新增窗口UI界面布局，用于实现小窗登录，默认水平居中，可配置Y方向的位置，窗口大小可配置；
+ 支持进场、退场动画；
+ 新增更灵活的协议动态配置；
+ */
+//mini登录框tag 41000
+@property (nonatomic, assign)   NSUInteger  *miniBoxViewTag;
+//mini登录框 Y方向位置，上中下，水平方向上居中
+@property (nonatomic, assign)   NSInteger   miniBoxYPosition;
+//mini登录框 宽度
+@property (nonatomic, assign)   CGFloat     miniBoxWidth;
+//mini登录框 高度
+@property (nonatomic, assign)   CGFloat     miniBoxHeight;
+
+/*----------------------------------自定义动画配置----------------------------------*/
+/**
+ *新增自定义动画属性，支持合作方传入自定义的动画，用于转场
+ */
+@property (nonatomic, strong)   NSObject *AnimatedTransitioningObj;
+
+/*---------------------------------合作方用户协议名称--------------------------------*/
+/**
+ *v3.7.2新增，合作方用户协议名称，使用新接口，即占位符$CAT时必须传入，详细请参考接入demo
+ */
+@property (nonatomic, strong) NSString      *partnerPAName;
+
+/*---------------------------------运营商协议相关配置--------------------------------*/
+/**
+ *若有需求，可传入运营商的协议名称和协议url
+ *若有传值，隐私协议标签将根据运营商类型和传入的值，显示运营商协议名称，点击跳转到相应的协议url
+ *详情请参考接入demo
+ */
+//中国移动协议名称及url，协议和url必须同时配置
+@property (nonatomic, strong) NSString      *chinaMobileTitle;
+@property (nonatomic, strong) NSString      *chinaMobileUrl;
+//中国联通协议名称及url，协议和url必须同时配置
+@property (nonatomic, strong) NSString      *chinaUnicomTitle;
+@property (nonatomic, strong) NSString      *chinaUnicomUrl;
 
 @end
 

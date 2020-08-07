@@ -1,5 +1,5 @@
-framework module EAccountHYSDK {
-  umbrella header "EAccountHYSDK.h"
+framework module EAccountOpenPageSDK {
+  umbrella header "EAccountOpenPageSDK.h"
 
   export *
   module * { export * }

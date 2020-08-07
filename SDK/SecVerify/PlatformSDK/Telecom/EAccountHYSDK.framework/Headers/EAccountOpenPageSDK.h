@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "EAccountOpenPageConfig.h"
+#import "EAccountHYPreLoginModel.h"
+#import "EAccountHYCTEConfig.h"
 
 /**
- SDK v3.7.0 20191112
+ 行业版SDK v3.7.6 20200323
  */
 /**
  声明一个block
@@ -33,14 +35,6 @@ typedef   void (^clickEventHandler) (NSString * _Nonnull senderTag);
 
 @interface EAccountOpenPageSDK : NSObject
 
-
-/**
- 初始化SDK钱调用。默认为正式环境的bundleId,需要使用测试环境的bundleId（一般是为了方便企业证书重签名之后测试），请添加这个方法，在发布APP的时候请确保没有使用该方法。
- */
-
-+(void)setTestBundleId;
-
-
 /**
  初始化SDK
  @param appId 接入方在账号平台领取的appId
@@ -50,13 +44,22 @@ typedef   void (^clickEventHandler) (NSString * _Nonnull senderTag);
               appSecret:(NSString * _Nonnull)appSecrect;
 
 /**
+ *预登录接口 v3.7.2新增
+ @param model 接口超时时间配置
+ */
+
++ (void)requestPRELogin:(EAccountHYPreLoginModel * _Nonnull)model
+             completion:(nonnull successHandler)completion
+                failure:(nonnull failureHandler)fail;
+
+/**
  预登录
 
  @param timeoutInterval 接口超时时间
  */
 + (void)requestPreLogin:(NSTimeInterval)timeoutInterval
            completion:(nonnull successHandler)completion
-              failure:(nonnull failureHandler)fail;
+              failure:(nonnull failureHandler)fail DEPRECATED_MSG_ATTRIBUTE("Please use `requestPRELogin:completion:failure:` instead");
 
 
 
@@ -65,6 +68,33 @@ typedef   void (^clickEventHandler) (NSString * _Nonnull senderTag);
  @param enable 开关参数
  */
 + (void)printConsoleEnable:(BOOL)enable;
+
++ (void)setDomainName:(EAccountHYCTEConfig *)config;
+
+/// v3.7.2新增接口方法， 打开全屏登录页面，用户点击登录按钮的时候会返回相应的结果
+/// @param config 登录界面相关动态配置
+/// @param controller 传入当前vc
+/// @param clickHandler 合作方新增按钮的点击回调
+/// @param completion 成功回调
+/// @param fail 失败回调
++ (void)openAtuhVC:(EAccountOpenPageConfig * _Nonnull)config
+        controller:(nonnull UIViewController *)controller
+      clickHandler:(nonnull clickEventHandler)clickHandler
+        completion:(nonnull successHandler)completion
+           failure:(nonnull failureHandler)fail;
+
+
+/// v3.7.2新增接口方法， 打开Mini登录页面，用户点击登录按钮的时候会返回相应的结果
+/// @param config 登录界面相关动态配置
+/// @param controller 传入当前vc
+/// @param clickHandler 合作方新增按钮的点击回调
+/// @param completion 成功回调
+/// @param fail 失败回调
++ (void)openMiniAtuhVC:(EAccountOpenPageConfig * _Nonnull)config
+        controller:(nonnull UIViewController *)controller
+      clickHandler:(nonnull clickEventHandler)clickHandler
+        completion:(nonnull successHandler)completion
+           failure:(nonnull failureHandler)fail;
 
 /**
  打开登录页面，用户点击登录按钮的时候会返回相应的结果
@@ -76,7 +106,7 @@ typedef   void (^clickEventHandler) (NSString * _Nonnull senderTag);
 + (void)openAtuhVC:(EAccountOpenPageConfig * _Nonnull)config
       clickHandler:(nonnull clickEventHandler)clickHandler
         completion:(nonnull successHandler)completion
-           failure:(nonnull failureHandler)fail;
+           failure:(nonnull failureHandler)fail DEPRECATED_MSG_ATTRIBUTE("Please use `openAtuhVC:controller:clickHandler:completion:failure:` instead");
 
 /**
  打开登录页面，用户点击登录按钮的时候会返回相应的结果
@@ -86,7 +116,7 @@ typedef   void (^clickEventHandler) (NSString * _Nonnull senderTag);
  */
 + (void)openAtuhVC:(nonnull clickEventHandler)clickHandler
         completion:(nonnull successHandler)completion
-           failure:(nonnull failureHandler)fail;
+           failure:(nonnull failureHandler)fail DEPRECATED_MSG_ATTRIBUTE("Please use `openAtuhVC:controller:clickHandler:completion:failure:` instead");
 
 /**
  主动关闭授权页面

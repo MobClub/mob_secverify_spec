@@ -81,6 +81,13 @@ typedef NS_ENUM(NSInteger, SVDScreenStatus) {
  */
 + (void)getScreenStatus:(void(^)(SVDScreenStatus status, CGSize size))status;
 
+/*
+ 适用于手动关闭场景下
+ 获取token成功后，因为app网络错误，导致无法完成登录流程
+ 需要重新点击登录按钮,获取token的场景
+ */
++ (void)reLoginVCEnable;
+
 #pragma mark -默认视图元素
 
 //logo视图
