@@ -13,7 +13,7 @@
 #define SVD_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 1792 ||[[UIScreen mainScreen] currentMode].size.height >=2436) : NO)
 
 //底部home高度
-#define SVD_TabbarSafeBottomMargin (SVD_iPhoneX ? 34.f : 0.f)
+#define SVD_TabbarSafeBottomMargin (SVD_iPhoneX ? 34.f : 10.f)
 
 #define SVD_StatusBarSafeBottomMargin (SVD_iPhoneX ? 44.f : 20.f)
 
@@ -30,12 +30,15 @@
 //#define SVD_LoginURL @"http://10.18.97.63:22345/demo/sdkLogin"
 //#define SVD_LoginURL @"http://verity.test.mob.com/demo/demo/sdkLogin"
 #define SVD_LoginURL @"http://10.18.97.63.p22345.ipport.test.mob.com/demo/sdkLogin"
-
+#define SVD_SMSVerifyURL @"http://10.18.97.63.p22345.ipport.test.mob.com/demo/verify"
 #else
 
 #define SVD_LoginURL @"https://demo.verify.mob.com/demo/sdkLogin"
+#define SVD_SMSVerifyURL @"https://demo.verify.mob.com/demo/verify"
 
 #endif
+
+#define SVD_SMS_TEST_PHONE @"13166238067"
 
 //moba6b6c6d6 //b89d2427a3bc7ad1aea1e1e8c1d36bf3
 

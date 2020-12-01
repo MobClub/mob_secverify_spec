@@ -25,5 +25,11 @@ typedef void(^SecVerifyCommonHander)(void);
  */
 typedef void (^SecVerifySMSCodeHandler) (NSString * _Nullable smsToken, NSError * _Nullable error);
 
+/**
+ *   @brief 本机认证结果回调
+ *   @param result 认证结果
+ *   @param error 当error为空时表示成功
+ */
+typedef void (^SecVerifyMAResultHandler) (BOOL result, NSError * _Nullable error);
 
 #endif /* SVSDKDefine_h */

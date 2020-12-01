@@ -549,7 +549,8 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
     
     // Clear old motion effect, then add new motion effects
     self.hudView.motionEffects = @[];
-    [self.hudView addMotionEffect:effectGroup];
+    // TODO: 下面这行代码会报: -[UIApplication applicationState] must be used from main thread only
+//    [self.hudView addMotionEffect:effectGroup];
 }
 
 - (void)updateViewHierarchy {

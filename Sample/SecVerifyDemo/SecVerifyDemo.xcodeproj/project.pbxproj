@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E01DE8424247F6C0073CFB3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E01DE8324247F6C0073CFB3 /* CoreTelephony.framework */; };
+		5EAF3DEF24344B24004A37BA /* SVDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5EAF3DEE24344B24004A37BA /* SVDemo.gif */; };
+		5EAF3DF22435B987004A37BA /* SVDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF3DF12435B987004A37BA /* SVDLoginViewController.m */; };
+		6E6F6EA72570DC3500F71285 /* CustomExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6EA62570DC3500F71285 /* CustomExample.m */; };
+		6E6F6EAB2570DE1100F71285 /* SmallWindowExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6EAA2570DE1100F71285 /* SmallWindowExample.m */; };
+		6E6F6EAF2571294400F71285 /* SVDVerifyNaviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F6EAE2571294300F71285 /* SVDVerifyNaviationViewController.m */; };
 		9199DD0A231CB4D900B8F428 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9199DD09231CB4D900B8F428 /* AppDelegate.m */; };
 		9199DD0D231CB4D900B8F428 /* SVDVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9199DD0C231CB4D900B8F428 /* SVDVerifyViewController.m */; };
 		9199DD12231CB4DC00B8F428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9199DD11231CB4DC00B8F428 /* Assets.xcassets */; };
@@ -44,8 +50,9 @@
 		91CDBA08231CEE39001D3D48 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CDB9EB231CEE39001D3D48 /* AFURLRequestSerialization.m */; };
 		91CDBA09231CEE39001D3D48 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CDB9ED231CEE39001D3D48 /* AFNetworkReachabilityManager.m */; };
 		91CDBA0A231CEE39001D3D48 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CDB9EE231CEE39001D3D48 /* AFSecurityPolicy.m */; };
-		91CDBAA2231CFC2F001D3D48 /* SVDVerifyNaviationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CDBAA1231CFC2F001D3D48 /* SVDVerifyNaviationViewController.m */; };
 		91CDBAA4231CFCCE001D3D48 /* GIF.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91CDBAA3231CFCCE001D3D48 /* GIF.gif */; };
+		B10610F123ED59B900BECF0A /* SVDPolicyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B10610F023ED59B900BECF0A /* SVDPolicyManager.m */; };
+		B10610F423ED5C3400BECF0A /* SVDPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10610F323ED5C3400BECF0A /* SVDPolicyViewController.m */; };
 		B145211D23E9235400D3259A /* SecVerify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145211023E9235400D3259A /* SecVerify.framework */; };
 		B145211E23E9235400D3259A /* EAccountHYSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145211323E9235400D3259A /* EAccountHYSDK.framework */; };
 		B145211F23E9235400D3259A /* EAccountOpenPageResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B145211423E9235400D3259A /* EAccountOpenPageResource.bundle */; };
@@ -53,7 +60,11 @@
 		B145212123E9235400D3259A /* TYRZSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145211723E9235400D3259A /* TYRZSDK.framework */; };
 		B145212223E9235400D3259A /* OAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145211923E9235400D3259A /* OAuth.framework */; };
 		B145212323E9235400D3259A /* SecVerify.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B145211A23E9235400D3259A /* SecVerify.bundle */; };
-		B145212423E9235400D3259A /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145211C23E9235400D3259A /* MOBFoundation.framework */; };
+		B167829323ED7EC2009BE319 /* SVDPolicyWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B167829223ED7EC2009BE319 /* SVDPolicyWebViewController.m */; };
+		B1A6A9BC23F6783F003C0FAE /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A6A9BB23F6783F003C0FAE /* MOBFoundation.framework */; };
+		BD6926002552A39800C3CBAA /* account_login_sdk_core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6925FE2552A39800C3CBAA /* account_login_sdk_core.framework */; };
+		BDFCE5F52553DAE30042BCA1 /* SVDDemoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFCE5F42553DAE30042BCA1 /* SVDDemoHelper.m */; };
+		BDFE45682555233500E031B9 /* SVDMobileAuthCommitCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFE45672555233500E031B9 /* SVDMobileAuthCommitCodeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +78,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E01DE8324247F6C0073CFB3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		5EAF3DEE24344B24004A37BA /* SVDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SVDemo.gif; sourceTree = "<group>"; };
+		5EAF3DF02435B987004A37BA /* SVDLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVDLoginViewController.h; sourceTree = "<group>"; };
+		5EAF3DF12435B987004A37BA /* SVDLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVDLoginViewController.m; sourceTree = "<group>"; };
+		6E6F6EA52570DC3500F71285 /* CustomExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomExample.h; sourceTree = "<group>"; };
+		6E6F6EA62570DC3500F71285 /* CustomExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomExample.m; sourceTree = "<group>"; };
+		6E6F6EA92570DE1100F71285 /* SmallWindowExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmallWindowExample.h; sourceTree = "<group>"; };
+		6E6F6EAA2570DE1100F71285 /* SmallWindowExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmallWindowExample.m; sourceTree = "<group>"; };
+		6E6F6EAD2571294300F71285 /* SVDVerifyNaviationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVDVerifyNaviationViewController.h; sourceTree = "<group>"; };
+		6E6F6EAE2571294300F71285 /* SVDVerifyNaviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVDVerifyNaviationViewController.m; sourceTree = "<group>"; };
 		9199DD05231CB4D900B8F428 /* SecVerifyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecVerifyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9199DD08231CB4D900B8F428 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9199DD09231CB4D900B8F428 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,9 +164,11 @@
 		91CDB9EE231CEE39001D3D48 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		91CDB9EF231CEE39001D3D48 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		91CDB9F0231CEE39001D3D48 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		91CDBAA0231CFC2F001D3D48 /* SVDVerifyNaviationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVDVerifyNaviationViewController.h; sourceTree = "<group>"; };
-		91CDBAA1231CFC2F001D3D48 /* SVDVerifyNaviationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVDVerifyNaviationViewController.m; sourceTree = "<group>"; };
 		91CDBAA3231CFCCE001D3D48 /* GIF.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GIF.gif; sourceTree = "<group>"; };
+		B10610EF23ED59B900BECF0A /* SVDPolicyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVDPolicyManager.h; sourceTree = "<group>"; };
+		B10610F023ED59B900BECF0A /* SVDPolicyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVDPolicyManager.m; sourceTree = "<group>"; };
+		B10610F223ED5C3400BECF0A /* SVDPolicyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVDPolicyViewController.h; sourceTree = "<group>"; };
+		B10610F323ED5C3400BECF0A /* SVDPolicyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVDPolicyViewController.m; sourceTree = "<group>"; };
 		B10AC17123B4B3BC001DB377 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B10AC17323B4B495001DB377 /* libXCTestBundleInject.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libXCTestBundleInject.dylib; path = Platforms/iPhoneOS.platform/Developer/usr/lib/libXCTestBundleInject.dylib; sourceTree = DEVELOPER_DIR; };
 		B145211023E9235400D3259A /* SecVerify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecVerify.framework; sourceTree = "<group>"; };
@@ -155,7 +178,14 @@
 		B145211723E9235400D3259A /* TYRZSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TYRZSDK.framework; sourceTree = "<group>"; };
 		B145211923E9235400D3259A /* OAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuth.framework; sourceTree = "<group>"; };
 		B145211A23E9235400D3259A /* SecVerify.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SecVerify.bundle; sourceTree = "<group>"; };
-		B145211C23E9235400D3259A /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		B167829123ED7EC2009BE319 /* SVDPolicyWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVDPolicyWebViewController.h; sourceTree = "<group>"; };
+		B167829223ED7EC2009BE319 /* SVDPolicyWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVDPolicyWebViewController.m; sourceTree = "<group>"; };
+		B1A6A9BB23F6783F003C0FAE /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		BD6925FE2552A39800C3CBAA /* account_login_sdk_core.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = account_login_sdk_core.framework; sourceTree = "<group>"; };
+		BDFCE5F32553DAE30042BCA1 /* SVDDemoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVDDemoHelper.h; sourceTree = "<group>"; };
+		BDFCE5F42553DAE30042BCA1 /* SVDDemoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVDDemoHelper.m; sourceTree = "<group>"; };
+		BDFE45662555233500E031B9 /* SVDMobileAuthCommitCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVDMobileAuthCommitCodeVC.h; sourceTree = "<group>"; };
+		BDFE45672555233500E031B9 /* SVDMobileAuthCommitCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVDMobileAuthCommitCodeVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,15 +193,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E01DE8424247F6C0073CFB3 /* CoreTelephony.framework in Frameworks */,
 				B145211E23E9235400D3259A /* EAccountHYSDK.framework in Frameworks */,
+				BD6926002552A39800C3CBAA /* account_login_sdk_core.framework in Frameworks */,
 				91CDB9F1231CEE39001D3D48 /* Bugly.framework in Frameworks */,
 				9199DDD8231CBB4900B8F428 /* SystemConfiguration.framework in Frameworks */,
 				9199DDD6231CBB2200B8F428 /* libc++.tbd in Frameworks */,
 				B145212223E9235400D3259A /* OAuth.framework in Frameworks */,
-				B145211D23E9235400D3259A /* SecVerify.framework in Frameworks */,
-				B145212423E9235400D3259A /* MOBFoundation.framework in Frameworks */,
+				B1A6A9BC23F6783F003C0FAE /* MOBFoundation.framework in Frameworks */,
 				B145212123E9235400D3259A /* TYRZSDK.framework in Frameworks */,
 				9199DDD4231CB72D00B8F428 /* libz.tbd in Frameworks */,
+				B145211D23E9235400D3259A /* SecVerify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +217,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E6F6EA82570DD6500F71285 /* SVAuthPageUIMakerExamples */ = {
+			isa = PBXGroup;
+			children = (
+				6E6F6EAC2570DF5900F71285 /* CommonVc */,
+				6E6F6EA52570DC3500F71285 /* CustomExample.h */,
+				6E6F6EA62570DC3500F71285 /* CustomExample.m */,
+				6E6F6EA92570DE1100F71285 /* SmallWindowExample.h */,
+				6E6F6EAA2570DE1100F71285 /* SmallWindowExample.m */,
+			);
+			path = SVAuthPageUIMakerExamples;
+			sourceTree = "<group>";
+		};
+		6E6F6EAC2570DF5900F71285 /* CommonVc */ = {
+			isa = PBXGroup;
+			children = (
+				6E6F6EAD2571294300F71285 /* SVDVerifyNaviationViewController.h */,
+				6E6F6EAE2571294300F71285 /* SVDVerifyNaviationViewController.m */,
+				9199DDE2231CBED900B8F428 /* SVDSuccessViewController.h */,
+				9199DDE1231CBED900B8F428 /* SVDSuccessViewController.m */,
+				5EAF3DF02435B987004A37BA /* SVDLoginViewController.h */,
+				5EAF3DF12435B987004A37BA /* SVDLoginViewController.m */,
+			);
+			path = CommonVc;
+			sourceTree = "<group>";
+		};
 		9199DCFC231CB4D900B8F428 = {
 			isa = PBXGroup;
 			children = (
@@ -207,18 +264,17 @@
 		9199DD07231CB4D900B8F428 /* SecVerifyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BDFCE5E22553DA470042BCA1 /* SVDMobileAuth */,
 				B145210E23E9235400D3259A /* SDK */,
 				9199DD08231CB4D900B8F428 /* AppDelegate.h */,
 				9199DD09231CB4D900B8F428 /* AppDelegate.m */,
 				9199DD0B231CB4D900B8F428 /* SVDVerifyViewController.h */,
 				9199DD0C231CB4D900B8F428 /* SVDVerifyViewController.m */,
-				9199DDE2231CBED900B8F428 /* SVDSuccessViewController.h */,
-				9199DDE1231CBED900B8F428 /* SVDSuccessViewController.m */,
-				91CDBAA0231CFC2F001D3D48 /* SVDVerifyNaviationViewController.h */,
-				91CDBAA1231CFC2F001D3D48 /* SVDVerifyNaviationViewController.m */,
 				9199DDDA231CBC7B00B8F428 /* SVDSerive.h */,
 				9199DDD9231CBC7A00B8F428 /* SVDSerive.m */,
 				9199DDDD231CBC8A00B8F428 /* SVDPrefixHeader.pch */,
+				6E6F6EA82570DD6500F71285 /* SVAuthPageUIMakerExamples */,
+				B10610EE23ED598400BECF0A /* SVDPolicy */,
 				91CDB9B3231CEE39001D3D48 /* ThirdLibs */,
 				B1147A1A23B5B20300C94854 /* Supporting Files */,
 			);
@@ -237,6 +293,7 @@
 		9199DDD2231CB72D00B8F428 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E01DE8324247F6C0073CFB3 /* CoreTelephony.framework */,
 				B10AC17323B4B495001DB377 /* libXCTestBundleInject.dylib */,
 				B10AC17123B4B3BC001DB377 /* XCTest.framework */,
 				9199DDD7231CBB4900B8F428 /* SystemConfiguration.framework */,
@@ -349,6 +406,19 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		B10610EE23ED598400BECF0A /* SVDPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				B10610EF23ED59B900BECF0A /* SVDPolicyManager.h */,
+				B10610F023ED59B900BECF0A /* SVDPolicyManager.m */,
+				B10610F223ED5C3400BECF0A /* SVDPolicyViewController.h */,
+				B10610F323ED5C3400BECF0A /* SVDPolicyViewController.m */,
+				B167829123ED7EC2009BE319 /* SVDPolicyWebViewController.h */,
+				B167829223ED7EC2009BE319 /* SVDPolicyWebViewController.m */,
+			);
+			path = SVDPolicy;
+			sourceTree = "<group>";
+		};
 		B1147A1A23B5B20300C94854 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +426,7 @@
 				9199DD16231CB4DC00B8F428 /* Info.plist */,
 				9199DD13231CB4DC00B8F428 /* LaunchScreen.storyboard */,
 				91CDBAA3231CFCCE001D3D48 /* GIF.gif */,
+				5EAF3DEE24344B24004A37BA /* SVDemo.gif */,
 				9199DD11231CB4DC00B8F428 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -384,6 +455,7 @@
 		B145211123E9235400D3259A /* PlatformSDK */ = {
 			isa = PBXGroup;
 			children = (
+				BD6925FB2552A10300C3CBAA /* UnionWoStore */,
 				B145211223E9235400D3259A /* Telecom */,
 				B145211523E9235400D3259A /* Mobile */,
 				B145211823E9235400D3259A /* Union */,
@@ -420,9 +492,28 @@
 		B145211B23E9235400D3259A /* Required */ = {
 			isa = PBXGroup;
 			children = (
-				B145211C23E9235400D3259A /* MOBFoundation.framework */,
+				B1A6A9BB23F6783F003C0FAE /* MOBFoundation.framework */,
 			);
 			path = Required;
+			sourceTree = "<group>";
+		};
+		BD6925FB2552A10300C3CBAA /* UnionWoStore */ = {
+			isa = PBXGroup;
+			children = (
+				BD6925FE2552A39800C3CBAA /* account_login_sdk_core.framework */,
+			);
+			path = UnionWoStore;
+			sourceTree = "<group>";
+		};
+		BDFCE5E22553DA470042BCA1 /* SVDMobileAuth */ = {
+			isa = PBXGroup;
+			children = (
+				BDFCE5F32553DAE30042BCA1 /* SVDDemoHelper.h */,
+				BDFCE5F42553DAE30042BCA1 /* SVDDemoHelper.m */,
+				BDFE45662555233500E031B9 /* SVDMobileAuthCommitCodeVC.h */,
+				BDFE45672555233500E031B9 /* SVDMobileAuthCommitCodeVC.m */,
+			);
+			path = SVDMobileAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +600,7 @@
 				B145211F23E9235400D3259A /* EAccountOpenPageResource.bundle in Resources */,
 				B145212323E9235400D3259A /* SecVerify.bundle in Resources */,
 				91CDBAA4231CFCCE001D3D48 /* GIF.gif in Resources */,
+				5EAF3DEF24344B24004A37BA /* SVDemo.gif in Resources */,
 				9199DD12231CB4DC00B8F428 /* Assets.xcassets in Resources */,
 				B145212023E9235400D3259A /* TYRZResource.bundle in Resources */,
 				91CDBA04231CEE39001D3D48 /* SVProgressHUD.bundle in Resources */,
@@ -532,26 +624,34 @@
 				91CDB9F3231CEE39001D3D48 /* FLAnimatedImageView.m in Sources */,
 				91CDBA00231CEE39001D3D48 /* SVRadialGradientLayer.m in Sources */,
 				9199DDE3231CBED900B8F428 /* SVDSuccessViewController.m in Sources */,
+				6E6F6EAF2571294400F71285 /* SVDVerifyNaviationViewController.m in Sources */,
 				91CDB9FA231CEE39001D3D48 /* NSArray+MASAdditions.m in Sources */,
+				BDFE45682555233500E031B9 /* SVDMobileAuthCommitCodeVC.m in Sources */,
 				91CDBA05231CEE39001D3D48 /* AFURLResponseSerialization.m in Sources */,
 				9199DD0D231CB4D900B8F428 /* SVDVerifyViewController.m in Sources */,
 				91CDBA03231CEE39001D3D48 /* SVIndefiniteAnimatedView.m in Sources */,
+				6E6F6EAB2570DE1100F71285 /* SmallWindowExample.m in Sources */,
 				91CDB9FE231CEE39001D3D48 /* MASViewAttribute.m in Sources */,
+				BDFCE5F52553DAE30042BCA1 /* SVDDemoHelper.m in Sources */,
 				91CDB9F2231CEE39001D3D48 /* FLAnimatedImage.m in Sources */,
 				91CDBA07231CEE39001D3D48 /* AFURLSessionManager.m in Sources */,
+				B10610F423ED5C3400BECF0A /* SVDPolicyViewController.m in Sources */,
 				91CDBA0A231CEE39001D3D48 /* AFSecurityPolicy.m in Sources */,
 				91CDB9F9231CEE39001D3D48 /* MASLayoutConstraint.m in Sources */,
 				91CDB9FB231CEE39001D3D48 /* View+MASAdditions.m in Sources */,
 				91CDB9F7231CEE39001D3D48 /* MASCompositeConstraint.m in Sources */,
 				91CDBA01231CEE39001D3D48 /* SVProgressAnimatedView.m in Sources */,
-				91CDBAA2231CFC2F001D3D48 /* SVDVerifyNaviationViewController.m in Sources */,
 				91CDBA09231CEE39001D3D48 /* AFNetworkReachabilityManager.m in Sources */,
 				91CDBA06231CEE39001D3D48 /* AFHTTPSessionManager.m in Sources */,
 				9199DD18231CB4DC00B8F428 /* main.m in Sources */,
 				91CDB9F6231CEE39001D3D48 /* ViewController+MASAdditions.m in Sources */,
+				B167829323ED7EC2009BE319 /* SVDPolicyWebViewController.m in Sources */,
+				B10610F123ED59B900BECF0A /* SVDPolicyManager.m in Sources */,
 				91CDBA08231CEE39001D3D48 /* AFURLRequestSerialization.m in Sources */,
+				5EAF3DF22435B987004A37BA /* SVDLoginViewController.m in Sources */,
 				9199DDDB231CBC7B00B8F428 /* SVDSerive.m in Sources */,
 				9199DD0A231CB4D900B8F428 /* AppDelegate.m in Sources */,
+				6E6F6EA72570DC3500F71285 /* CustomExample.m in Sources */,
 				91CDB9F8231CEE39001D3D48 /* MASConstraintMaker.m in Sources */,
 				91CDB9F5231CEE39001D3D48 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				91CDBA02231CEE39001D3D48 /* SVProgressHUD.m in Sources */,
@@ -706,11 +806,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development: Yong Lian Niu (9HWH396783)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20008;
+				CURRENT_PROJECT_VERSION = 30020;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEPLOYMENT_POSTPROCESSING = NO;
-				DEVELOPMENT_TEAM = LW5266U92D;
+				DEVELOPMENT_TEAM = C87V99P45A;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../SDK/SecVerify",
@@ -720,19 +821,22 @@
 					"$(PROJECT_DIR)/../../SDK/Required",
 					"$(PROJECT_DIR)/SecVerifyDemo/ThirdLibs",
 					"$(inherited)",
+					"$(PROJECT_DIR)/../../SDK/SecVerify/PlatformSDK/UnionWoStore",
 				);
 				GCC_PREFIX_HEADER = SecVerifyDemo/SVDPrefixHeader.pch;
 				INFOPLIST_FILE = "SecVerifyDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_GENERATE_MAP_FILE = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.8;
+				MARKETING_VERSION = 3.0.2;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SecVerifyDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobtech.dailydiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = sec_VerifyDemo_dev;
+				PROVISIONING_PROFILE_SPECIFIER = DailyNewMobile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -741,10 +845,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development: Yong Lian Niu (9HWH396783)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20008;
-				DEVELOPMENT_TEAM = LW5266U92D;
+				CURRENT_PROJECT_VERSION = 30020;
+				DEVELOPMENT_TEAM = C87V99P45A;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../../SDK/SecVerify",
@@ -754,19 +858,21 @@
 					"$(PROJECT_DIR)/../../SDK/Required",
 					"$(PROJECT_DIR)/SecVerifyDemo/ThirdLibs",
 					"$(inherited)",
+					"$(PROJECT_DIR)/../../SDK/SecVerify/PlatformSDK/UnionWoStore",
 				);
 				GCC_PREFIX_HEADER = SecVerifyDemo/SVDPrefixHeader.pch;
 				INFOPLIST_FILE = "SecVerifyDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_GENERATE_MAP_FILE = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.8;
+				MARKETING_VERSION = 3.0.2;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mob.product.SecVerifyDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobtech.dailydiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = SecVerifyDis;
+				PROVISIONING_PROFILE_SPECIFIER = DailyNewMobile;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -780,11 +886,8 @@
 				DEVELOPMENT_TEAM = LW5266U92D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/SecVerify",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/SecVerify/PlatformSDK/Telecom",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/SecVerify/PlatformSDK/Mobile",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/SecVerify/PlatformSDK/Union",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/Required",
+					"$(PROJECT_DIR)/../../SDK/SecVerify/**",
+					"$(PROJECT_DIR)/../../SDK/Required/**",
 				);
 				GCC_PREFIX_HEADER = SecVerifyDemo/SVDPrefixHeader.pch;
 				INFOPLIST_FILE = SecVerifyDemoTests/Info.plist;
@@ -811,11 +914,8 @@
 				DEVELOPMENT_TEAM = LW5266U92D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/SecVerify",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/SecVerify/PlatformSDK/Telecom",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/SecVerify/PlatformSDK/Mobile",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/SecVerify/PlatformSDK/Union",
-					"$(PROJECT_DIR)/SecVerifyDemo/SDK/Required",
+					"$(PROJECT_DIR)/../../SDK/SecVerify/**",
+					"$(PROJECT_DIR)/../../SDK/Required/**",
 				);
 				GCC_PREFIX_HEADER = SecVerifyDemo/SVDPrefixHeader.pch;
 				INFOPLIST_FILE = SecVerifyDemoTests/Info.plist;

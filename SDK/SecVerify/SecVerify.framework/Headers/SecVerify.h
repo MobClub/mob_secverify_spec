@@ -31,6 +31,24 @@
 + (void)setTimeoutInterval:(NSTimeInterval)timeout;
 
 /**
+预请求本机验证Code
+
+@param handler 结果回调.
+*/
++ (void)preMobileAuth:(nullable SecVerifyResultHander)handler;
+
+/**
+ 本机认证
+ 
+ @param phoneNum 验证手机号
+ @param tokenInfo 预请求本机验证返回的tokenInfo
+ @param completion 结果回调
+*/
++ (void)mobileAuthWith:(nonnull NSString *)phoneNum
+                 token:(nonnull NSDictionary *)tokenInfo
+            completion:(nullable SecVerifyMAResultHandler)completion;
+
+/**
  预登录
 
  @param handler 返回字典和error , 字典中包含运营商类型. error为nil即为成功.

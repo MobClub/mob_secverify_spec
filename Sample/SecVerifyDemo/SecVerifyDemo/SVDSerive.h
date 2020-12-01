@@ -12,9 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SVDSerive : NSObject
 
-+ (instancetype)sharedSerive;
-
-- (void)phoneLogin:(NSDictionary *)result completion:(void (^) (NSError *error, NSString *phone))handler;
++ (void)verifyGetPhoneNumberWith:(NSDictionary *)result completion:(void (^) (NSError *error, NSString *phone))handler;
 
 @end
 
