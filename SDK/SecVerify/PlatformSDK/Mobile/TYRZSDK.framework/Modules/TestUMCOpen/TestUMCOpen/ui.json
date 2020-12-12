@@ -1,0 +1,27 @@
+[
+{"title":"","items":[
+    {"title":"获取网络类型和运营商信息","type":"button"},
+    ]
+},
+{"title":"客户端取号","items":[
+        {"title":"超时设置(毫秒)","type":"field","label":"超时时间设置"},
+        {"title":"预取号","type":"button"},
+        {"title":"显式获取token","type":"button"},
+        {"title":"隐式获取token","type":"button"},
+        {"title":"删除PhoneScrip","type":"button"},
+        {"title":"模拟调用dimiss","type":"switch"},
+        {"title":"横屏(默认是右边)","type":"switch"},
+        {"title":"短验开关","type":"switch"},
+        {"title":"弹窗开关","type":"switch"},
+        {"title":"边缘弹窗开关","type":"switch"},
+        {"title":"授权页状态栏设为白色","type":"switch"},
+    ]
+},
+ {"title":"服务端校验","items":[
+        {"title":"获取用户信息","type":"button"},
+        {"title":"请输入手机号码","type":"field","label":"本机号码校验"},
+        {"title":"本机号码校验","type":"button"}
+    ]
+ },
+
+]
