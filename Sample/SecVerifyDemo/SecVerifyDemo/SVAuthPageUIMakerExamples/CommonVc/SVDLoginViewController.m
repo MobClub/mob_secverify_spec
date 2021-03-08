@@ -9,7 +9,7 @@
 #import "SVDLoginViewController.h"
 #import "Masonry.h"
 #import "SVProgressHUD.h"
-#import <SecVerify/SecVerify.h>
+#import <SecVerify/SVSDKHyVerify.h>
 #import "SVDSuccessViewController.h"
 
 @interface SVDLoginViewController ()
@@ -73,27 +73,11 @@
     if (self.loginButtonClickedBlock) {
         self.loginButtonClickedBlock(button);
     }
-//    [SecVerify finishLoginVc:^{
-//        NSLog(@"账号密码登陆...");
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [SVProgressHUD showWithStatus:@"加载中..."];
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.0), dispatch_get_main_queue(), ^{
-//                [SVProgressHUD dismiss];
-//
-//                // 界面跳转
-//                SVDSuccessViewController *successVC = [[SVDSuccessViewController alloc] init];
-//                successVC.phone = @"admin";
-//                [[UIApplication sharedApplication].keyWindow.rootViewController.navigationController pushViewController:successVC animated:YES];
-//            });
-//
-//        });
-//
-//    }];
 }
 
 // 微信
 - (void)weixinLoginAction {
-    [SecVerify finishLoginVc:^{
+    [SVSDKHyVerify finishLoginVcAnimated:YES Completion:^{
         NSLog(@"微信登陆...");
     }];
 }

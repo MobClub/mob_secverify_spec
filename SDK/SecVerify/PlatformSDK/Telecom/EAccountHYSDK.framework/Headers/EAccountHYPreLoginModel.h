@@ -13,17 +13,17 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EAccountHYPreLoginModel : NSObject
 
 /**
- 资源获取超时时间 默认6.0s
+ 资源获取超时时间 默认6.0s（单位为：秒）
  */
 @property (nonatomic, assign) NSTimeInterval  timeoutIntervalForResource;
 
 /**
- 连接超时时间 默认6.0s
+ 连接超时时间 默认6.0s（单位为：秒）
  */
 @property (nonatomic, assign) NSTimeInterval  connectTimeoutInterval;
 
 /**
- 总超时时间 默认8.0s ，应设置比其他超时时间长
+ 总超时时间 默认8.0s （单位为：秒），应设置比其他超时时间长
 */
 @property (nonatomic, assign) NSTimeInterval  totalTimeoutInterval;
 

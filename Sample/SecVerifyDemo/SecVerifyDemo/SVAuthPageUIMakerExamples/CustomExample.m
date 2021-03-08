@@ -118,8 +118,18 @@
     [bottomView addSubview:zhBtn];
     _zhBtn = zhBtn;
 
-    //布局
-    [self tryLayoutSubViews_Portrait:authVC userInfo:userInfo];
+//    //布局
+//    [self tryLayoutSubViews_Portrait:authVC userInfo:userInfo];
+    
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown) {
+        //布局_竖屏
+        [self tryLayoutSubViews_Portrait:authVC userInfo:userInfo];
+    }else{
+       //布局_竖屏
+       [self tryLayoutSubViews_Landscape:authVC userInfo:userInfo];
+    }
+    
 }
 
 #pragma mark - 布局(适配竖屏)
@@ -290,7 +300,13 @@
         make.width.mas_equalTo(SVD_ScreenHeight * 0.8);
     }];
     [privacyTextView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(loginButton.mas_bottom).offset(20);
+        
+        if (@available(iOS 11.0, *)) {
+            make.bottom.mas_equalTo(authPageView.mas_safeAreaLayoutGuideBottom);
+        } else {
+            make.bottom.mas_equalTo(authPageView.mas_bottom).offset(-20);
+        }
+        
         make.right.mas_equalTo(loginButton);
         make.height.mas_greaterThanOrEqualTo(50);
     }];
@@ -301,8 +317,6 @@
         make.centerY.mas_equalTo(privacyTextView).offset(-16);
     }];
     
-    CGFloat topOffset = 20;
-    float height = [SVDDemoHelper isPhoneX]?(115+36.0):115;
 
     [customBackButton mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.width.height.mas_equalTo(50);
@@ -312,19 +326,19 @@
     
     // bottomView
     [bottomView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(- SVD_TabbarSafeBottomMargin - 10);
+        make.bottom.mas_equalTo(privacyTextView.mas_top);
         make.centerX.mas_equalTo(0);
         make.width.mas_equalTo(SVD_ScreenWidth);
         make.height.mas_equalTo(70+mLbl.bounds.size.height);
     }];
 
     [mLbl mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(10);
+        make.bottom.mas_equalTo(wxBtn.mas_top).offset(-10);
         make.centerX.mas_equalTo(0);
     }];
 
     [wxBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(mLbl.mas_bottom).offset(topOffset);
+        make.bottom.mas_equalTo(-10);
         make.centerX.mas_equalTo(-50);
         make.width.height.mas_equalTo(48);
     }];

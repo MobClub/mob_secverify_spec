@@ -129,18 +129,18 @@
     [phoneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(logoImageView.mas_bottom).offset(20);
         make.centerX.mas_equalTo(0);
-        make.width.mas_equalTo(SVD_ScreenWidth*0.8);
+        make.width.mas_equalTo(authPageView).multipliedBy(0.8);
         make.height.mas_equalTo(30);
     }];
     [sloganLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(0);
-        make.width.mas_equalTo(SVD_ScreenWidth*0.8);
+        make.width.mas_equalTo(authPageView).multipliedBy(0.8);
         make.height.mas_equalTo(30);
         make.top.mas_equalTo(phoneLabel.mas_bottom).offset(5);
     }];
     [loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(0);
-        make.width.mas_equalTo(SVD_ScreenWidth*0.8);
+        make.width.mas_equalTo(authPageView).multipliedBy(0.8);
         make.height.mas_equalTo(48);
         make.top.mas_equalTo(sloganLabel.mas_bottom).offset(10);
     }];
@@ -201,6 +201,9 @@
         fromView = fromViewController.view;
         toView = toViewController.view;
     }
+    
+    toView.frame = transitionContext.containerView.frame;
+
     
     contentBgView = self.authPageVC.view;
     

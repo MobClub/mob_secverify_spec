@@ -27,7 +27,7 @@
 /**
  *  取号-联通
  */
-- (void) login:(double)timeout resultListener:(void (^)(NSDictionary *data))listener;
+- (void)login:(double)timeout resultListener:(void (^)(NSDictionary *data))listener;
 
 
 /**

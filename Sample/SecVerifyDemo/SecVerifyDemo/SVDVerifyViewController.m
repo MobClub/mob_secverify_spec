@@ -21,8 +21,6 @@
 #import <SecVerify/SVSDKHyVerify.h>
 #import <MOBFoundation/MobSDK+Privacy.h>
 
-#import <SecVerify/SecVerify.h>
-
 #import "CustomExample.h"
 #import "SmallWindowExample.h"
 
@@ -81,16 +79,18 @@ static BOOL showDealloc = NO;
 - (void)startPreLogin{
     WeakSelf
     
+    [SVSDKHyVerify setDebug:YES];
     [SVSDKHyVerify preLogin:^(NSDictionary * _Nullable resultDic, NSError * _Nullable error) {
-        
+
         [weakSelf enableVerifyBtn:YES];
-        
+
         if (!error){
             NSLog(@"### 预取号成功: %@", resultDic);
         }else{
             NSLog(@"### 预取号失败%@", error);
         }
     }];
+    
 }
 
 
@@ -236,7 +236,7 @@ static BOOL showDealloc = NO;
             //对于需要多次拉起授权页登录的，此处预取号为下次拉起加速，通常情况下可以不需要此操作
             [SVSDKHyVerify preLogin:nil];
         });
-   
+
     }];
     
 }
@@ -279,7 +279,7 @@ static BOOL showDealloc = NO;
     NSLog(@"开始请求本机认证Token, 开始时间: %02f", [[NSDate date] timeIntervalSince1970]);
     
     __weak typeof(self) weakSelf = self;
-    [SecVerify preMobileAuth:^(NSDictionary * _Nullable resultDic, NSError * _Nullable error) {
+    [SVSDKHyVerify mobileAuth:^(NSDictionary * _Nullable resultDic, NSError * _Nullable error) {
         NSLog(@"请求本机认证Token完成, 结束时间: %02f", [[NSDate date] timeIntervalSince1970]);
         if (resultDic
             && [resultDic isKindOfClass:[NSDictionary class]]
@@ -336,7 +336,7 @@ static BOOL showDealloc = NO;
         vc.loginButtonClickedBlock = ^(UIButton * _Nonnull button) {
             // 账号密码登陆页面点击登陆事件回调
             //关闭登录视图
-            [SecVerify finishLoginVc:^{
+            [SVSDKHyVerify finishLoginVcAnimated:YES Completion:^{
                 [SVProgressHUD showWithStatus:@"加载中..."];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.0), dispatch_get_main_queue(), ^{
                     [SVProgressHUD dismiss];
@@ -444,7 +444,7 @@ static BOOL showDealloc = NO;
     [self.view addSubview:maButton];
     
     UILabel *versionL = [[UILabel alloc] init];
-    versionL.text = [NSString stringWithFormat:@"版本号 %@", [SecVerify sdkVersion]];
+    versionL.text = [NSString stringWithFormat:@"版本号 %@", [SVSDKHyVerify sdkVersion]];
     versionL.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
     versionL.textColor = [UIColor colorWithRed:184/255.0 green:184/255.0 blue:188/255.0 alpha:1/1.0];
     [versionL sizeToFit];
