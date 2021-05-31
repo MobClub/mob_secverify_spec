@@ -17,36 +17,47 @@
 
 @optional
 
-//授权页生命周期相关事件
+//授权页生命周期相关事件:
+
+/**授权页vc对象创建*/
 -(void)svVerifyAuthPageDidInit:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
+/**将要present前，可在此设置转场动画代理*/
 -(void)svVerifyAuthPageWillPresent:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
+/**present的completion回调*/
 -(void)svVerifyAuthPageDidPresent:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
+/**授权页viewDidload,一般在此设置基本控件样式布局和添加自定义控件*/
 -(void)svVerifyAuthPageViewDidLoad:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
+
+/**授权页显示消失,随着页面跳转，可能多次触发*/
 -(void)svVerifyAuthPageViewWillAppear:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
 -(void)svVerifyAuthPageViewDidAppear:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
 -(void)svVerifyAuthPageViewWillDisAppear:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
 -(void)svVerifyAuthPageViewDidDisappear:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
+
+/**横竖屏旋转实时切换时，可用于更新UI*/
 -(void)svVerifyAuthPageViewWillLayoutSubviews:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
+/**横竖屏旋转实时切换*/
 -(void)svVerifyAuthPageViewWillTransition:(UIViewController *)authVC toSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
-//授权页释放
+
+/**授权页释放*/
 -(void)svVerifyAuthPageDealloc;
 
-//将要跳转协议web页,返回NO则不自动跳转,可在此自行跳转自定义web页
+/**将要跳转协议web页,返回NO则不自动跳转,可在此自行跳转自定义web页*/
 -(BOOL)svVerifyShouldLinkPrivacy:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
-//将要显示内置的未勾选协议提示,返回NO则不显示内置提示,可在此添加自定义提示
+/**将要显示内置的未勾选协议提示,返回NO则不显示内置提示,可在此添加自定义提示*/
 -(BOOL)svVerifyShouldAlertUnChecked:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
-//将要显示内置的一键登录等待loading,返回NO则不显示内置loading,可在此添加自定义loading
+/**将要显示内置的一键登录等待loading,返回NO则不显示内置loading,可在此添加自定义loading*/
 -(BOOL)svVerifyShouldShowLoadingLoginClick:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
 
-//授权页点击相关事件
+/**授权页点击相关事件*/
 -(void)svVerifyCheckBoxClick:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo checkBoxValue:(BOOL)isSeleted;
 -(void)svVerifyLoginButtonClick:(UIViewController *)authVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo checkBoxValue:(BOOL)isSeleted;
 
-//授权页navigationVC生命周期相关事件
+/**授权页navigationVC生命周期相关事件*/
 -(void)svVerifyAuthPageNavViewWillLayoutSubviews:(UINavigationController *)authNav userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
 -(void)svVerifyAuthPageNavViewWillTransition:(UINavigationController *)authNav toSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
 
-//隐私协议页生命周期相关事件
+/**隐私协议页生命周期相关事件*/
 -(void)svVerifyAuthPrivacyPageViewDidLoad:(UIViewController *)webVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
 -(void)svVerifyAuthPrivacyPageViewWillAppear:(UIViewController *)webVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
 -(void)svVerifyAuthPrivacyPageViewDidAppear:(UIViewController *)webVC userInfo:(SVSDKHyProtocolUserInfo*)userInfo;
@@ -127,6 +138,23 @@
  */
 + (BOOL)isVerifyEnable;
 
+#pragma maek - 本机认证
+/**
+ * 本机认证获取Token
+ * @param handler 结果回调。当error为空，resultDic为本机认证token
+ */
++ (void)mobileAuth:(SecVerifyResultHander _Nullable )handler;
+
+/**
+ * 本机号码认证
+ * @param phoneNum 手机号
+ * @param tokenInfos 预请求得到的token信息
+ * @param completion 结果回调
+ */
++ (void)mobileAuthWith:(NSString * _Nonnull)phoneNum
+                 token:(NSDictionary * _Nonnull)tokenInfos
+               timeOut:(NSTimeInterval)timeOut
+            completion:(void(^_Nullable)(NSDictionary * _Nullable result, NSError * _Nullable error))completion;
 
 #pragma mark - 设置超时
 /**
