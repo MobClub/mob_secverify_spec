@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define EACCOUNT_MINI_POSITION_TOP 3 //弹窗置顶
 #define EACCOUNT_MINI_POSITION_BOTTOM 4 //弹窗底部
 
+@class EAccountCustomPrivacyAgreement;
 @interface EAccountOpenPageConfig : NSObject
 /**
  SDK接入注意事项:
@@ -419,9 +420,14 @@ NS_ASSUME_NONNULL_BEGIN
  新增更灵活的协议动态配置；
  */
 //mini登录框tag 41000
-@property (nonatomic, assign)   NSUInteger  *miniBoxViewTag;
+@property (nonatomic, assign)   NSUInteger  miniBoxViewTag;
 //mini登录框 Y方向位置，上中下，水平方向上居中
 @property (nonatomic, assign)   NSInteger   miniBoxYPosition;
+/**
+    mini登录框 Y方向的位置是否基于SafeArea（默认基于屏幕），即该项默认值为NO
+    比如基于屏幕的center和基于safeArea的center是有差异的，前者是整个手机的正中央；如果是安全区域：在X系列上头部44、底部34，视觉上会向下偏移5个像素，）
+ */
+@property (nonatomic, assign)   BOOL isMiniBoxYBaseOnSafeArea;
 //mini登录框 宽度
 @property (nonatomic, assign)   CGFloat     miniBoxWidth;
 //mini登录框 高度
@@ -451,6 +457,52 @@ NS_ASSUME_NONNULL_BEGIN
 //中国联通协议名称及url，协议和url必须同时配置
 @property (nonatomic, strong) NSString      *chinaUnicomTitle;
 @property (nonatomic, strong) NSString      *chinaUnicomUrl;
+
+
+/*======================================v3.8.3新增属性==========================================*/
+/**新的隐私协议*/
+@property (nonatomic,strong) EAccountCustomPrivacyAgreement *customPrivacyAgreement;
+/**新的弹窗隐私协议*/
+@property (nonatomic,strong) EAccountCustomPrivacyAgreement *dialogPrivacyAgreement;
+@end
+
+
+#pragma -mark 隐私协议类
+/**
+*行业版v3.8.3新增隐私协议类
+*/
+@interface EAccountCustomPrivacyAgreement : NSObject
+/**隐私协议富文本*/
+@property (nonatomic, strong) NSMutableAttributedString *attrStr;
+//隐私协议textView的tag ------------------ 41008 弹窗确认框的隐私协议textView的tag为41009
+@property (nonatomic, assign) NSUInteger textViewTag;
+/**隐私协议Y偏移量  仅对授权页面的隐私协议起作用
+ 该控件底部（bottom）相对于屏幕（safeArea）底部（bottom）的距离
+ */
+@property (nonatomic,assign) CGFloat offsetY;
+/**忽略：隐私协议url与webNavTitle对应dic*/
+@property (nonatomic, readonly, strong) NSMutableDictionary *urlDic;
+/**该协议富文本样式属于授权页面还是弹窗确认框，默认属于授权页面，即默认值为NO*/
+@property (nonatomic, assign) BOOL isDialogPrivacy;
+
+/**
+ @param url 协议地址 可为空，传@""即可
+ @param color 协议文本颜色
+ @param title 协议web页面导航栏的标题文本  ***可为空，默认为：服务与隐私协议
+ @param range 协议点击、文本颜色的范围
+ */
+- (void)addAttributeWithUrl:(NSString * _Nullable)url Color:(UIColor *)color Title:(NSString * _Nullable)title Range:(NSRange)range;
+
+@end
+
+@protocol EAccountOpenPageConfig <NSObject>
+
+@optional
+/**
+ 根据tag获取对应的view
+ @param tag 对应的view的tag
+ */
+- (UIView *)getViewByTag:(NSInteger)tag;
 
 @end
 
